@@ -2,7 +2,7 @@ import React from 'react';
 import {Button} from "@material-ui/core";
 import {auth, provider} from "./firebase";
 import "./Login.css";
-import IMessage from "./image/Imessage.PNG.png"
+import image from "./Iimage/Imessage.PNG.png"
 import { AlternateEmail } from '@material-ui/icons';
 
 const Login = () => {
@@ -14,8 +14,8 @@ const Login = () => {
     return (
         <div className="loging">
             <div className="login-logo">
-                <img src={IMessage} alt=""/>
-                <h1>iMessage</h1>
+                <img src={image} alt=""/>
+                <h2>iMessagee</h2>
             </div>
             <Button onclick={singIn}>Sign In</Button>
         </div>

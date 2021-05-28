@@ -6,6 +6,7 @@
 }
 
 .loging > div > img {
+    
   object-fit: contain;
   height: 150px;
 }
@@ -18,6 +19,6 @@
 }
 
 .loging > button:hover {
-  background-color: gainsboro;
+  background-color: rgb(220, 220, 220);
   color: #3ea4fb;
 }
