@@ -1,6 +1,6 @@
-import { Avatar } from "@material-ui/core";
+import { Avatar, IconButton } from "@material-ui/core";
 import React from "react";
-import { Search } from "@material-ui/icons";
+import { RateReviewOutlined, Search } from "@material-ui/icons";
 
 const Sidebar = () => {
   return (
@@ -11,6 +11,9 @@ const Sidebar = () => {
           <Search></Search>
           <input type="text" placeholder="Search" />
         </div>
+        <IconButton>
+          <RateReviewOutlined></RateReviewOutlined>
+        </IconButton>
       </div>
 
       <div className="sidebar__chats"></div>
