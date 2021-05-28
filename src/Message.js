@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import selectUser from "./features/UserSlice";
 import "./Message.css";
 
-const Massage = forwardRef(
+const Message = forwardRef(
   (
     {
       id,
@@ -28,4 +28,4 @@ const Massage = forwardRef(
   }
 );
 
-export default Massage;
+export default Message;

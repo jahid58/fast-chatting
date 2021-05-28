@@ -3,7 +3,7 @@ import {Button} from "@material-ui/core";
 import {auth, provider} from "./firebase";
 import "./Login.css";
 import image from "./Iimage/Imessage.PNG.png"
-import { AlternateEmail } from '@material-ui/icons';
+
 
 const Login = () => {
 

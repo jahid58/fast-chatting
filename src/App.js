@@ -3,13 +3,13 @@ import React, { useEffect } from "react";
 import {useDispatch, useSelector} from "react-redux";
 import "./App.css";
 import FastChatting from "./FastChatting";
-import { selectUser, login, logout } from "./features/userSlice";
+import { SelectUser, login, logout } from "./features/UserSlice";
 import Login from "./Login";
 import { auth} from "./firebase"
 
 const App = () => {
   
-  const user = useSelector(selectUser);
+  const user = useSelector(SelectUser);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -24,12 +24,7 @@ const App = () => {
         }))
       }else{
         //user is logged out
-        dispatch(logout({
-          uid: "",
-          photo: "",
-          email: "",
-          displayName: "",
-        }))
+        dispatch(logout({}))
       }
     })
   }, []);

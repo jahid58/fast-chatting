@@ -1,6 +1,6 @@
 import firebase from 'firebase'
 
-const firebaseConfig = {
+  const firebaseConfig = {
     apiKey: "AIzaSyAAoypjcBtpemhVfTkgKOL14OCUYNx0CFw",
     authDomain: "imessege-clone-742b4.firebaseapp.com",
     projectId: "imessege-clone-742b4",
@@ -14,5 +14,5 @@ const firebaseConfig = {
   const auth = firebase.auth();
   const provider = new firebase.auth.GoogleAuthProvider();
   
-  export default { auth, provider };
+  export { auth, provider };
   export default db;
