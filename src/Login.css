@@ -1,0 +1,23 @@
+.loging {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.loging > div > img {
+  object-fit: contain;
+  height: 150px;
+}
+
+.loging > button {
+  width: 300px;
+  background-color: #3ea4fb;
+  color: #eff2f5;
+  font-weight: 800;
+}
+
+.loging > button:hover {
+  background-color: rgb(220, 220, 220);
+  color: #3ea4fb;
+}
