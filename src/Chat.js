@@ -18,6 +18,7 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
+    console.log(chatId);
     if (chatId) {
       db.collection("chats")
         .doc(chatId)
@@ -70,7 +71,7 @@ const Chat = () => {
           <input
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            placeholder="IMessages"
+            placeholder="FastChatting"
             type="text"
           />
           <button onClick={sendMessage}>Send Message</button>

@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { useEffect } from "react";
 
 export const chatSlice = createSlice({
   name: "chat",
@@ -11,6 +10,7 @@ export const chatSlice = createSlice({
     setChat: (state, action) => {
       state.chatId = action.payload.chatId;
       state.chatName = action.payload.chatName;
+      console.log(action.payload);
     },
   },
 });

@@ -10,6 +10,7 @@ const SidebarChat = (id, chatName) => {
   const [chatInfo, setChatInfo] = useState([]);
 
   useEffect(() => {
+    console.log("here i am");
     db.collection("chats")
       .doc(id)
       .collection("messages")

@@ -10,6 +10,7 @@ import { SelectUser } from "./features/UserSlice";
 const Sidebar = () => {
   const user = useSelector(SelectUser);
   const [chats, setChats] = useState([]);
+  const [name, setName] = useState("");
 
   useEffect(() => {
     db.collection("chats").onSnapshot((snapshot) =>
@@ -23,6 +24,7 @@ const Sidebar = () => {
   }, []);
   const addChat = () => {
     const chatName = prompt("Please Enter your chat name");
+    setName(chatName);
     if (chatName) {
       db.collection("chats").add({
         chatName: chatName,
@@ -47,9 +49,9 @@ const Sidebar = () => {
       </div>
 
       <div className="sidebar__chats">
-        {chats.map(({ id, data: { chatName } }) => {
-          <SidebarChat key={id} id={id} chatName={chatName} />;
-        })}
+        {chats.map(({ id, data: { chatName } }) => (
+          <SidebarChat key={id} id={id} chatName={chatName} />
+        ))}
       </div>
     </div>
   );
