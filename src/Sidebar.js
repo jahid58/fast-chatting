@@ -5,7 +5,7 @@ import { RateReviewOutlined, Search } from "@material-ui/icons";
 import SidebarChat from "./SidebarChat";
 import db, { auth } from "./firebase";
 import { useSelector } from "react-redux";
-import { SelectUser } from "./features/UserSlice";
+import { SelectUser } from "./features/userSlice";
 
 const Sidebar = () => {
   const user = useSelector(SelectUser);

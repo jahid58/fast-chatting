@@ -10,7 +10,6 @@ export const chatSlice = createSlice({
     setChat: (state, action) => {
       state.chatId = action.payload.chatId;
       state.chatName = action.payload.chatName;
-      console.log(action.payload);
     },
   },
 });

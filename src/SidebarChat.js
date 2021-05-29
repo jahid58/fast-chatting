@@ -1,7 +1,7 @@
 import { Avatar } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { setChat } from "./features/ChatSlice";
+import { setChat } from "./features/chatSlice";
 import db from "./firebase";
 import * as timeago from "timeago.js";
 import "./SidebarChat.css";

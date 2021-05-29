@@ -3,10 +3,10 @@ import "./Chat.css";
 import MicNoneIcon from "@material-ui/icons/MicNone";
 import Message from "./Message";
 import { useSelector } from "react-redux";
-import { SelectChatName, SelectChatId, chatSlice } from "./features/ChatSlice";
+import { SelectChatName, SelectChatId, chatSlice } from "./features/chatSlice";
 import db from "./firebase";
 import firebase from "firebase";
-import { SelectUser } from "./features/UserSlice";
+import { SelectUser } from "./features/userSlice";
 import FlipMove from "react-flip-move";
 import { IconButton } from "@material-ui/core";
 
@@ -33,7 +33,7 @@ const Chat = () => {
           )
         );
     }
-  }, [chatId]);
+  }, []);
 
   const sendMessage = (e) => {
     e.preventDefault();
@@ -42,7 +42,7 @@ const Chat = () => {
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
       messages: input,
       uid: user.uid,
-      photo: user.photoURL,
+      photo: user.photo,
       email: user.email,
       displayName: user.displayName,
     });
