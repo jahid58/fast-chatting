@@ -4,7 +4,7 @@ import { photoAlbumRounded } from "@material-ui/icons";
 import { useSelector } from "react-redux";
 import selectUser from "./features/UserSlice";
 import "./Message.css";
-import photo from "./image/person.png";
+import photo from './image/person.png'
 
 const Message = forwardRef(
   (

@@ -13,6 +13,7 @@ const SidebarChat = (id, chatName) => {
     db.collection("chats")
       .doc(id)
       .collection("messages")
+      .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) =>
         setChatInfo(snapshot.docs.map((doc) => doc.data()))
       );
