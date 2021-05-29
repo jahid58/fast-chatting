@@ -10,21 +10,14 @@ import { SelectUser } from "./features/UserSlice";
 const Sidebar = () => {
   const user = useSelector(SelectUser);
   const [chats, setChats] = useState([]);
-  const [name, setName] = useState("");
 
   useEffect(() => {
     db.collection("chats").onSnapshot((snapshot) =>
-      setChats(
-        snapshot.docs.map((doc) => ({
-          id: doc.id,
-          data: doc.data(),
-        }))
-      )
+      setChats(snapshot.docs.map((doc) => ({ id: doc.id, data: doc.data() })))
     );
   }, []);
   const addChat = () => {
     const chatName = prompt("Please Enter your chat name");
-    setName(chatName);
     if (chatName) {
       db.collection("chats").add({
         chatName: chatName,

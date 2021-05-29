@@ -5,12 +5,11 @@ import { setChat } from "./features/ChatSlice";
 import db from "./firebase";
 import * as timeago from "timeago.js";
 import "./SidebarChat.css";
-const SidebarChat = (id, chatName) => {
+const SidebarChat = ({ id, chatName }) => {
   const dispatch = useDispatch();
   const [chatInfo, setChatInfo] = useState([]);
 
   useEffect(() => {
-    console.log("here i am");
     db.collection("chats")
       .doc(id)
       .collection("messages")
@@ -21,14 +20,14 @@ const SidebarChat = (id, chatName) => {
   }, [id]);
   return (
     <div
-      onClick={() => {
+      onClick={() =>
         dispatch(
           setChat({
             chatId: id,
             chatName: chatName,
           })
-        );
-      }}
+        )
+      }
       className="sidebarChat"
     >
       <Avatar src={chatInfo[0]?.photo}></Avatar>
