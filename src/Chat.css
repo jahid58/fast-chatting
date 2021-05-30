@@ -1,62 +1,64 @@
 .chat {
-  display: flex;
-  flex-direction: column;
-  flex: 0.65;
-  height: 100vh;
-  background-color: white;
+    display:flex;
+    flex-direction: column;
+    flex: 0.65;
+    background-color: white;
+    height:100vh;
 }
+
 .chat__header {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid lightgray;
-  background-color: #f5f5f5;
+    display: flex;
+    padding:20px;
+    border: 1px solid lightgray;
+    justify-content: space-between;
+    background-color: rgb(235, 235, 235);
 }
+
 .chat__header > h4 {
-  font-weight: 500;
-  color: gray;
+    font-weight: 500;
+    color: gray;
 }
 
 .chat__name {
-  color: black;
+    color:black
 }
+
 .chat__input {
-  display: flex;
-  align-items: center;
-  padding: 10px, 20px;
-  border-top: 1px solid lightgray;
-  background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    padding:10px 20px;
+    border-top: 1px solid rgb(206, 205, 205);
+    background-color: rgb(241, 240, 240);
 }
 
 .chat__input > form {
-  flex: 1;
+    flex:1;
 }
 
-.chat__messages {
-  flex: 1;
-  overflow: scroll;
-}
-.chat__messages::-webkit-scrollbar {
-  display: none;
-}
-
-.chat__messages {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
 .chat__input > form > input {
-  width: 75%;
-  outline-width: 0;
-  border: 1px solid lightgray;
-  border-radius: 999px;
-  padding: 15px;
+    width: 95%;
+    outline-width: 0;
+    border: 1px solid lightgrey;
+    border-radius: 999px;
+    padding: 11px;
 }
+
 .chat__input > form > button {
-  border: none;
-  font-size: 16px;
-  margin: 2%;
-  padding: 10px;
-  background-color: rgb(37, 197, 50);
-  color: rgb(5, 26, 26);
-  border-radius: 10px;
+    display:none;
+}
+
+.chat__messages {
+    flex:1;
+    overflow: scroll;
+}
+
+/* hide scrollbar for chrome, safari and opera */
+.chat__messages::-webkit-scrollbar{
+    display: none;
+}
+
+/* hide scrollbar for IE, Firefox and Edge */
+.chat__messages {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

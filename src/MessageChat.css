@@ -1,0 +1,43 @@
+.message {
+    display: flex;
+    align-items: center;
+    margin:15px;
+    width: fit-content;
+    justify-content: space-between;
+    position: relative;
+}
+
+.message > p {
+    background-color: rgb(224, 224, 224);
+    font-size: medium;
+    padding:15px;
+    border-radius: 99px;
+    margin:10px;
+    margin-right: auto;
+}
+
+.message > small {
+    color:gray;
+    position: absolute;
+    font-size: 10px;
+    bottom: -5px;
+    right:0;
+}
+
+.message__sender {
+    margin-left: auto;
+}
+
+.message__sender > .message__photo {
+    order: 1;
+    margin:15px;
+}
+
+.message__photo {
+    order:0;
+}
+
+.message__sender > p {
+    background-color: rgb(52, 207, 207);
+    color: white;
+}
