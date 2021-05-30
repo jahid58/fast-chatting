@@ -1,4 +1,4 @@
-/* .chat {
+.chat {
     display:flex;
     flex-direction: column;
     flex: 0.65;
@@ -36,11 +36,11 @@
 }
 
 .chat__input > form > input {
-    width: 98%;
+    width: 95%;
     outline-width: 0;
     border: 1px solid lightgrey;
-    border-radius:999px;
-    padding: 5px;
+    border-radius: 999px;
+    padding: 11px;
 }
 
 .chat__input > form > button {
@@ -61,4 +61,4 @@
 .chat__messages {
     -ms-overflow-style: none;
     scrollbar-width: none;
-} */
+}
