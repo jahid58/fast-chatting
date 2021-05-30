@@ -1,4 +1,4 @@
-.sidebar {
+/* .sidebar {
     flex: 0.35;
     height:100vh;
     display: flex;
@@ -46,4 +46,4 @@
 .sidebar__chats {
     -ms-overflow-style: none;
     scrollbar-width: none;
-}
+} */
