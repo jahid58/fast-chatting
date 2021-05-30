@@ -1,24 +1,27 @@
-import React, { forwardRef } from "react";
-import { Avatar } from "@material-ui/core";
-import { photoAlbumRounded } from "@material-ui/icons";
-import { useSelector } from "react-redux";
+import { Avatar } from '@material-ui/core';
+import React, { forwardRef } from 'react';
+import { useSelector } from 'react-redux';
+import { SelectUser } from './features/UserSlice';
+import './MessageChat.css';
 
-import "./Message.css";
-import photo from "./image/person.png";
-import { SelectUser } from "./features/userSlice";
+const Message = forwardRef( 
+    (
+        {id, contents: { timestamp, displayName, uid, photo, email, message } }, 
+        ref
+    ) => {
 
-const Message = ({
-  id,
-  contents: { timestamp, displayName, email, messages, photo, uid },
-}) => {
-  const user = useSelector(SelectUser);
-  return (
-    <div className={`massage ${user.email === email && "message__sender"}`}>
-      <Avatar className="message__photo" src={photo} />
-      <p>{messages}</p>
-      <small>{new Date(timestamp?.toDate()).toLocaleString()} </small>
-    </div>
-  );
-};
+    const user = useSelector(SelectUser)
+    return (
+        <div 
+        ref={ref} 
+        className={`message ${user.email === email && 
+        "message__sender"}`}>
+
+            <Avatar className="message__photo" src={photo} />
+            <p>{message}</p>
+            <small>{ new Date(timestamp?.toDate()).toLocaleString() } </small> 
+        </div>
+    )
+})
 
 export default Message;

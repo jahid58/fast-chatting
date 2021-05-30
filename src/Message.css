@@ -1,43 +1,43 @@
-.massage {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: fit-content;
-  justify-content: space-between;
-  margin: 15px;
-  border-radius: 20px;
+.message {
+    display: flex;
+    align-items: center;
+    margin:15px;
+    width: fit-content;
+    justify-content: space-between;
+    position: relative;
 }
 
-.massage > p {
-  background-color: #f3f3f5;
-  font-size: medium;
-  padding: 15px;
-  border-radius: 20px;
-  margin: 10px;
-  margin-right: auto;
+.message > p {
+    background-color: rgb(224, 224, 224);
+    font-size: medium;
+    padding:15px;
+    border-radius: 99px;
+    margin:10px;
+    margin-right: auto;
 }
 
-.massage > small {
-  color: gray;
-  position: absolute;
-  font-size: 8px;
-  bottom: -5px;
-  right: 0;
+.message > small {
+    color:gray;
+    position: absolute;
+    font-size: 10px;
+    bottom: -5px;
+    right:0;
 }
 
 .message__sender {
-  margin-left: auto;
+    margin-left: auto;
 }
 
 .message__sender > .message__photo {
-  order: 1;
-  margin: 15px;
+    order: 1;
+    margin:15px;
 }
 
 .message__photo {
-  order: 0;
+    order:0;
 }
 
-.message__sender {
-  color: rgb(20, 18, 18);
+.message__sender > p {
+    background-color: rgb(52, 207, 207);
+    color: white;
 }
