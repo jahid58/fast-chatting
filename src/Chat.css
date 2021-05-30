@@ -45,12 +45,18 @@
   scrollbar-width: none;
 }
 .chat__input > form > input {
-  width: 85%;
+  width: 75%;
   outline-width: 0;
   border: 1px solid lightgray;
   border-radius: 999px;
-  padding: 5px;
+  padding: 15px;
 }
 .chat__input > form > button {
   border: none;
+  font-size: 16px;
+  margin: 2%;
+  padding: 10px;
+  background-color: rgb(37, 197, 50);
+  color: rgb(5, 26, 26);
+  border-radius: 10px;
 }

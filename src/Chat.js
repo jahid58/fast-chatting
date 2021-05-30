@@ -18,13 +18,12 @@ const Chat = () => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    console.log(chatId);
     if (chatId) {
       db.collection("chats")
         .doc(chatId)
         .collection("messages")
         .orderBy("timestamp", "desc")
-        .onSanpshot((snapshot) =>
+        .onSnapshot((snapshot) =>
           setMessages(
             snapshot.docs.map((doc) => ({
               id: doc.id,
@@ -33,7 +32,7 @@ const Chat = () => {
           )
         );
     }
-  }, []);
+  }, [chatId]);
 
   const sendMessage = (e) => {
     e.preventDefault();
@@ -58,13 +57,10 @@ const Chat = () => {
         <strong>Details</strong>
       </div>
 
-      {/* chat messages */}
       <div className="chat__messages">
-        <FlipMove>
-          {messages.map(({ id, data }) => {
-            <Message key={id} contents={data} />;
-          })}
-        </FlipMove>
+        {messages.map(({ id, data }) => (
+          <Message key={id} contents={data} />
+        ))}
       </div>
       <div className="chat__input">
         <form>

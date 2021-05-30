@@ -9,14 +9,13 @@ import { SelectUser } from "./features/userSlice";
 
 const Message = ({
   id,
-  contents: { timestamp, displayName, email, message, photo, uid },
+  contents: { timestamp, displayName, email, messages, photo, uid },
 }) => {
   const user = useSelector(SelectUser);
-
   return (
     <div className={`massage ${user.email === email && "message__sender"}`}>
       <Avatar className="message__photo" src={photo} />
-      <p>{message}</p>
+      <p>{messages}</p>
       <small>{new Date(timestamp?.toDate()).toLocaleString()} </small>
     </div>
   );

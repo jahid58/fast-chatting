@@ -5,6 +5,7 @@
   width: fit-content;
   justify-content: space-between;
   margin: 15px;
+  border-radius: 20px;
 }
 
 .massage > p {
@@ -38,6 +39,5 @@
 }
 
 .message__sender {
-  background-color: #3cabfa;
-  color: white;
+  color: rgb(20, 18, 18);
 }

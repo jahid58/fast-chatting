@@ -13,7 +13,7 @@ const Login = () => {
     <div className="loging">
       <div className="login-logo">
         <img src={image} alt="" />
-        <h2>FastMessage</h2>
+        <h2>FastChatting</h2>
       </div>
       <Button onClick={singIn}>Sign In</Button>
     </div>
